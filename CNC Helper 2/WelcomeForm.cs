@@ -19,7 +19,10 @@ namespace CNC_Helper_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            CreateNewProject createNewProject = new CreateNewProject();
+            this.Hide();
+            createNewProject.Closed += (s, args) => this.Close();
+            createNewProject.Show();
         }
     }
 }
